@@ -176,7 +176,7 @@ a {
   width: 220px;
 }
 
-.search img {
+.search svg {
   position: absolute;
   left: 16px;
   top: 12px;
@@ -210,7 +210,7 @@ a {
 
 /* Hero */
 .hero {
-  background: var(--hcsc-color-bg-accent);
+  background: var(--hcsc-color-bg-hero);
   padding-block: var(--hcsc-spacing-4xl);
 }
 

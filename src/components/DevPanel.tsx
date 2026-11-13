@@ -1,3 +1,4 @@
+import { ThemeToggle } from './ThemeToggle'
 import { Button } from './ui'
 import {
   advanceClock,
@@ -30,6 +31,7 @@ export function DevPanel({ memberId, onMemberChange, onReset }: DevPanelProps) {
 
         <div className="dev-panel__grid">
           <div className="stack">
+            <ThemeToggle />
             <label htmlFor="dev-member" className="bold">
               Signed-in view
             </label>

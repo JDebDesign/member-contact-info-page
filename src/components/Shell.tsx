@@ -1,7 +1,5 @@
 import type { ReactNode } from 'react'
-import chevron from '../assets/icons/chevron-down.svg'
-import searchIcon from '../assets/icons/search.svg'
-import separator from '../assets/icons/separator.svg'
+import { ChevronDownIcon, SearchIcon, SeparatorIcon } from './icons'
 
 /** Non-functional links in the shared site chrome: this prototype only covers the contact page. */
 function PlaceholderLink({ children, className = 'placeholder-link' }: { children: ReactNode; className?: string }) {
@@ -46,7 +44,7 @@ export function SiteHeader() {
                   onClick={(event) => event.preventDefault()}
                 >
                   Our Story
-                  <img src={chevron} alt="" width={16} height={16} />
+                  <ChevronDownIcon />
                 </a>
               </li>
               <li>
@@ -58,7 +56,7 @@ export function SiteHeader() {
             </ul>
           </nav>
           <form className="search" role="search" onSubmit={(event) => event.preventDefault()}>
-            <img src={searchIcon} alt="" width={24} height={24} />
+            <SearchIcon />
             <label htmlFor="site-search" className="sr-only">
               Search
             </label>
@@ -78,11 +76,11 @@ export function Hero() {
           <ol className="breadcrumbs">
             <li>
               <PlaceholderLink>Home</PlaceholderLink>
-              <img src={separator} alt="" width={16} height={16} />
+              <SeparatorIcon />
             </li>
             <li>
               <PlaceholderLink>Account</PlaceholderLink>
-              <img src={separator} alt="" width={16} height={16} />
+              <SeparatorIcon />
             </li>
             <li aria-current="page">Contact information</li>
           </ol>

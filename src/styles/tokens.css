@@ -1,5 +1,10 @@
-/* Design tokens copied from the Figma file "HCSC - Member Contact Information UX". */
-:root {
+/*
+ * Design tokens copied from the Figma files "HCSC - Member Contact Information UX" and
+ * "HCSC - Practice Design System". Colors follow the library's Color collection (Light and Dark modes).
+ * The theme is set on <html data-theme="light|dark"> by src/lib/theme.ts.
+ */
+:root,
+.theme-light {
   --hcsc-color-text-primary: #003333;
   --hcsc-color-text-secondary: #4a6e6e;
   --hcsc-color-text-inverse: #ffffff;
@@ -9,6 +14,7 @@
   --hcsc-color-bg-muted: #dde2e2;
   --hcsc-color-bg-accent: #90cbff;
   --hcsc-color-bg-inverse: #003333;
+  --hcsc-color-bg-hero: #90cbff;
 
   --hcsc-color-border-default: #c4cece;
   --hcsc-color-border-subtle: #dde2e2;
@@ -16,9 +22,11 @@
   --hcsc-color-border-focus: #007cbf;
 
   --hcsc-color-action-primary-bg: #003333;
+  --hcsc-color-action-primary-bg-hover: #194747;
   --hcsc-color-action-primary-text: #ffffff;
   --hcsc-color-action-secondary-text: #003333;
   --hcsc-color-action-secondary-border: #003333;
+  --hcsc-color-action-secondary-bg-hover: #dde2e2;
   --hcsc-color-action-accent-text: #003333;
 
   --hcsc-color-feedback-info-bg: #eff2f5;
@@ -30,6 +38,47 @@
   --hcsc-color-feedback-success-bg: #e4f3ec;
   --hcsc-color-feedback-success-fg: #1e7b4f;
 
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --hcsc-color-text-primary: #ffffff;
+  --hcsc-color-text-secondary: #c4cece;
+  --hcsc-color-text-inverse: #ffffff;
+  --hcsc-color-text-link: #ffffff;
+
+  --hcsc-color-bg-page: #003333;
+  --hcsc-color-bg-muted: #315a5a;
+  --hcsc-color-bg-accent: #90cbff;
+  --hcsc-color-bg-inverse: #194747;
+  --hcsc-color-bg-hero: #0b4a6f;
+
+  --hcsc-color-border-default: #628181;
+  --hcsc-color-border-subtle: #315a5a;
+  --hcsc-color-border-strong: #ffffff;
+  --hcsc-color-border-focus: #90cbff;
+
+  --hcsc-color-action-primary-bg: #ffffff;
+  --hcsc-color-action-primary-bg-hover: #dde2e2;
+  --hcsc-color-action-primary-text: #003333;
+  --hcsc-color-action-secondary-text: #ffffff;
+  --hcsc-color-action-secondary-border: #ffffff;
+  --hcsc-color-action-secondary-bg-hover: #315a5a;
+  --hcsc-color-action-accent-text: #003333;
+
+  --hcsc-color-feedback-info-bg: #194747;
+  --hcsc-color-feedback-info-accent: #90cbff;
+  --hcsc-color-feedback-warning-bg: #452818;
+  --hcsc-color-feedback-warning-accent: #f16022;
+  --hcsc-color-feedback-error-bg: #4a1a1f;
+  --hcsc-color-feedback-error-fg: #ff9da2;
+  --hcsc-color-feedback-success-bg: #0f4a36;
+  --hcsc-color-feedback-success-fg: #7fdca8;
+
+  color-scheme: dark;
+}
+
+:root {
   --hcsc-font-family-body: 'Open Sans Variable', 'Open Sans', system-ui, sans-serif;
   --hcsc-font-family-display: 'Fraunces Variable', Fraunces, Georgia, serif;
 

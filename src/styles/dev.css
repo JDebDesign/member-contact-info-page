@@ -87,3 +87,59 @@
     grid-template-columns: 1fr;
   }
 }
+
+.theme-toggle {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hcsc-spacing-xs);
+}
+
+.theme-toggle legend {
+  padding: 0;
+  margin-bottom: var(--hcsc-spacing-xs);
+}
+
+.theme-toggle__options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #7b8794;
+  border-radius: var(--hcsc-radius-pill);
+  overflow: hidden;
+}
+
+.theme-toggle__option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--hcsc-size-touch-target);
+  cursor: pointer;
+  border-left: 1px solid #7b8794;
+}
+
+.theme-toggle__option:first-child {
+  border-left: 0;
+}
+
+.theme-toggle__option input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.theme-toggle__option:has(input:checked) {
+  background: #f5f7fa;
+  color: #1f2933;
+  font-weight: 700;
+}
+
+.theme-toggle__option:has(input:focus-visible) {
+  outline: 3px solid #90cbff;
+  outline-offset: -3px;
+}

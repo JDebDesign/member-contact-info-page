@@ -1,9 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode, Ref } from 'react'
-import errorIcon from '../assets/icons/notice-error.svg'
-import infoIcon from '../assets/icons/notice-info.svg'
-import successIcon from '../assets/icons/notice-success.svg'
-import warningIcon from '../assets/icons/notice-warning.svg'
-import fieldErrorIcon from '../assets/icons/field-error.svg'
+import { FieldErrorIcon, NoticeIcon } from './icons'
 
 export function Tag({ children, accent = false }: { children: ReactNode; accent?: boolean }) {
   return <span className={`tag${accent ? ' tag--accent' : ''}`}>{children}</span>
@@ -24,13 +20,6 @@ export function LinkButton({ className = '', type = 'button', ...rest }: ButtonP
 
 export type NoticeType = 'info' | 'success' | 'warning' | 'error'
 
-const NOTICE_ICONS: Record<NoticeType, string> = {
-  info: infoIcon,
-  success: successIcon,
-  warning: warningIcon,
-  error: errorIcon,
-}
-
 interface NoticeProps {
   type: NoticeType
   title: string
@@ -50,7 +39,7 @@ export function Notice({ type, title, children, actions, role, focusRef, id }: N
       role={role}
       className={`notice notice--${type}`}
     >
-      <img src={NOTICE_ICONS[type]} alt="" width={24} height={24} className="notice__icon" />
+      <NoticeIcon type={type} />
       <div className="notice__body">
         <p className="notice__title">{title}</p>
         {children ? <div className="notice__message">{children}</div> : null}
@@ -74,7 +63,7 @@ interface ErrorSummaryProps {
 export function ErrorSummary({ title, items, focusRef }: ErrorSummaryProps) {
   return (
     <div ref={focusRef} tabIndex={-1} role="alert" className="notice notice--error">
-      <img src={errorIcon} alt="" width={24} height={24} className="notice__icon" />
+      <NoticeIcon type="error" />
       <div className="notice__body">
         <p className="notice__title">{title}</p>
         <ul className="notice__list">
@@ -159,7 +148,7 @@ export function FormField({
       />
       {error ? (
         <p id={errorId} className="field__error">
-          <img src={fieldErrorIcon} alt="" width={20} height={20} />
+          <FieldErrorIcon />
           <span>
             <span className="sr-only">Error: </span>
             {error}

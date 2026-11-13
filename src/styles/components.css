@@ -45,11 +45,11 @@
 }
 
 .btn--secondary:hover {
-  background: var(--hcsc-color-bg-muted);
+  background: var(--hcsc-color-action-secondary-bg-hover);
 }
 
 .btn--primary:hover {
-  background: #004d4d;
+  background: var(--hcsc-color-action-primary-bg-hover);
 }
 
 .btn:disabled {
