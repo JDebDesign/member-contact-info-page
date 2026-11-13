@@ -1,0 +1,89 @@
+/* Prototype-only controls, deliberately unlike the member-facing design. */
+.dev-panel {
+  background: #1f2933;
+  color: #f5f7fa;
+  padding-block: var(--hcsc-spacing-lg);
+  font-size: var(--hcsc-type-body-sm-size);
+}
+
+.dev-panel a,
+.dev-panel .muted {
+  color: #cbd2d9;
+}
+
+.dev-panel__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hcsc-spacing-lg);
+}
+
+.dev-panel__title {
+  font-size: 20px;
+}
+
+.dev-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--hcsc-spacing-lg);
+}
+
+.dev-panel .btn {
+  color: #f5f7fa;
+  border-color: #f5f7fa;
+  min-height: var(--hcsc-size-touch-target);
+  padding-inline: var(--hcsc-spacing-md);
+}
+
+.dev-panel .btn:hover {
+  background: #323f4b;
+}
+
+.dev-select {
+  min-height: var(--hcsc-size-touch-target);
+  padding: 0 var(--hcsc-spacing-sm);
+  border-radius: var(--hcsc-radius-md);
+  background: #323f4b;
+  color: #f5f7fa;
+  border: 1px solid #7b8794;
+}
+
+.dev-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--hcsc-spacing-xs);
+  min-height: var(--hcsc-size-touch-target);
+}
+
+.dev-check input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  flex: none;
+}
+
+.dev-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 28px;
+  letter-spacing: 0.2em;
+}
+
+.dev-log {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hcsc-spacing-sm);
+  max-height: 260px;
+  overflow: auto;
+}
+
+.dev-log li {
+  padding: var(--hcsc-spacing-sm);
+  background: #323f4b;
+  border-radius: var(--hcsc-radius-md);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .dev-panel__grid {
+    grid-template-columns: 1fr;
+  }
+}

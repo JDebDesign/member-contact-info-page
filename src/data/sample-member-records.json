@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "notice": "All names, identifiers, contact details, and addresses below are fictional test data.",
+  "records": [
+    {
+      "memberId": "MEM-1001",
+      "name": {
+        "given": "Avery",
+        "family": "Morgan"
+      },
+      "accountRole": "primary",
+      "ageGroup": "adult",
+      "canEditOwnContactInfo": true,
+      "phones": [
+        {
+          "type": "mobile",
+          "number": "202-555-0148",
+          "preferred": true,
+          "smsConsent": {
+            "granted": false,
+            "wordingVersion": null,
+            "recordedAt": null
+          }
+        },
+        {
+          "type": "home",
+          "number": "(202) 555-0193",
+          "preferred": false,
+          "smsConsent": {
+            "granted": false,
+            "wordingVersion": null,
+            "recordedAt": null
+          }
+        }
+      ],
+      "primaryEmail": {
+        "address": "avery.morgan@example.test",
+        "verified": true
+      },
+      "addresses": {
+        "home": {
+          "line1": "42 Example Street",
+          "line2": "",
+          "city": "Arlington",
+          "state": "VA",
+          "postalCode": "22201"
+        },
+        "mailing": {
+          "sameAsHome": true,
+          "address": null
+        }
+      },
+      "testNotes": [
+        "Default masking: phone displays ending 0148 and email displays a***@example.test.",
+        "Covers two phone numbers, preferred-number selection, and same-as-home address."
+      ]
+    },
+    {
+      "memberId": "MEM-1002",
+      "name": {
+        "given": "Riley",
+        "family": "Morgan"
+      },
+      "accountRole": "dependent",
+      "ageGroup": "under18",
+      "canEditOwnContactInfo": false,
+      "managedByMemberId": "MEM-1001",
+      "phones": [
+        {
+          "type": "mobile",
+          "number": "202 555 0176",
+          "preferred": true,
+          "smsConsent": {
+            "granted": false,
+            "wordingVersion": null,
+            "recordedAt": null
+          }
+        }
+      ],
+      "primaryEmail": {
+        "address": "riley.morgan@example.test",
+        "verified": true
+      },
+      "addresses": {
+        "home": {
+          "line1": "42 Example Street",
+          "line2": "",
+          "city": "Arlington",
+          "state": "VA",
+          "postalCode": "22201"
+        },
+        "mailing": {
+          "sameAsHome": true,
+          "address": null
+        }
+      },
+      "testNotes": [
+        "Verify Edit actions are hidden and the account-holder management note is shown."
+      ]
+    },
+    {
+      "memberId": "MEM-1003",
+      "name": {
+        "given": "Jordan",
+        "family": "Lee"
+      },
+      "accountRole": "primary",
+      "ageGroup": "adult",
+      "canEditOwnContactInfo": true,
+      "phones": [
+        {
+          "type": "mobile",
+          "number": "4155550124",
+          "preferred": true,
+          "smsConsent": {
+            "granted": true,
+            "wordingVersion": "COMPLIANCE_TEXT_PENDING",
+            "recordedAt": "2026-10-12T14:30:00Z"
+          }
+        }
+      ],
+      "primaryEmail": {
+        "address": "jordan.lee@example.test",
+        "verified": true
+      },
+      "addresses": {
+        "home": {
+          "line1": "8 Test Avenue",
+          "line2": "Unit 3",
+          "city": "San Francisco",
+          "state": "CA",
+          "postalCode": "94105-1234"
+        },
+        "mailing": {
+          "sameAsHome": false,
+          "address": {
+            "line1": "PO Box 204",
+            "line2": "",
+            "city": "San Francisco",
+            "state": "CA",
+            "postalCode": "94104"
+          }
+        }
+      },
+      "testNotes": [
+        "Use only after replacing the pending wording version with approved consent language.",
+        "Covers a separate mailing address, a ZIP+4 code, and an explicitly recorded text consent."
+      ]
+    },
+    {
+      "memberId": "MEM-1004",
+      "name": {
+        "given": "Casey",
+        "family": "Patel"
+      },
+      "accountRole": "primary",
+      "ageGroup": "adult",
+      "canEditOwnContactInfo": true,
+      "phones": [
+        {
+          "type": "home",
+          "number": "303.555.0185",
+          "preferred": true,
+          "smsConsent": {
+            "granted": false,
+            "wordingVersion": null,
+            "recordedAt": null
+          }
+        }
+      ],
+      "primaryEmail": {
+        "address": "casey.patel@example.test",
+        "verified": true
+      },
+      "addresses": {
+        "home": {
+          "line1": "17 Sample Road",
+          "line2": "",
+          "city": "Denver",
+          "state": "CO",
+          "postalCode": "80202"
+        },
+        "mailing": {
+          "sameAsHome": false,
+          "address": {
+            "line1": "PO Box 18",
+            "line2": "",
+            "city": "Denver",
+            "state": "CO",
+            "postalCode": "80201"
+          }
+        }
+      },
+      "testNotes": [
+        "Use to test editing the home state; show the coverage-options warning before save.",
+        "The warning must not prevent the member from saving."
+      ]
+    },
+    {
+      "memberId": "MEM-1005",
+      "name": {
+        "given": "Taylor",
+        "family": "Reed"
+      },
+      "accountRole": "primary",
+      "ageGroup": "adult",
+      "canEditOwnContactInfo": true,
+      "phones": [
+        {
+          "type": "mobile",
+          "number": "617 555 0119",
+          "preferred": true,
+          "smsConsent": {
+            "granted": false,
+            "wordingVersion": null,
+            "recordedAt": null
+          }
+        }
+      ],
+      "primaryEmail": {
+        "address": "taylor.reed@example.test",
+        "verified": true,
+        "pendingChange": {
+          "newAddress": "taylor.new@example.test",
+          "status": "awaiting_code",
+          "verificationCode": null,
+          "codeSentAt": "2026-11-13T00:54:48-05:00",
+          "codeExpiresAt": "2026-11-13T01:04:48-05:00",
+          "resendAvailableAt": "2026-11-13T00:55:18-05:00"
+        }
+      },
+      "addresses": {
+        "home": {
+          "line1": "9 Placeholder Lane",
+          "line2": "",
+          "city": "Boston",
+          "state": "MA",
+          "postalCode": "02108"
+        },
+        "mailing": {
+          "sameAsHome": true,
+          "address": null
+        }
+      },
+      "testNotes": [
+        "The current email remains on file until a valid six-digit code is entered.",
+        "Do not store or expose a real verification code in fixtures.",
+        "Test code expiry after ten minutes and resend cooldown of 30 seconds."
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "postal-suggestion",
+      "setupMemberId": "MEM-1001",
+      "action": "Enter an address for which the postal lookup returns a close match.",
+      "expected": "Offer the suggested address or the entered address as choices."
+    },
+    {
+      "id": "field-validation",
+      "setupMemberId": "MEM-1001",
+      "action": "Submit a phone number with fewer than ten digits, an invalid email, an empty address line, or an invalid ZIP code.",
+      "expected": "Show a linked section error summary and associated inline messages; announce errors to assistive technology."
+    },
+    {
+      "id": "save-failure",
+      "setupMemberId": "MEM-1001",
+      "action": "Make the section save service unavailable.",
+      "expected": "Keep the form and entered values, explain that saving failed, and offer Try again."
+    },
+    {
+      "id": "save-success",
+      "setupMemberId": "MEM-1001",
+      "action": "Save a valid section update.",
+      "expected": "Return to read mode, show a brief section-specific confirmation, and move focus to it."
+    }
+  ]
+}

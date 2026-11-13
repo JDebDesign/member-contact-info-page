@@ -1,0 +1,97 @@
+/* Design tokens copied from the Figma file "HCSC - Member Contact Information UX". */
+:root {
+  --hcsc-color-text-primary: #003333;
+  --hcsc-color-text-secondary: #4a6e6e;
+  --hcsc-color-text-inverse: #ffffff;
+  --hcsc-color-text-link: #003333;
+
+  --hcsc-color-bg-page: #ffffff;
+  --hcsc-color-bg-muted: #dde2e2;
+  --hcsc-color-bg-accent: #90cbff;
+  --hcsc-color-bg-inverse: #003333;
+
+  --hcsc-color-border-default: #c4cece;
+  --hcsc-color-border-subtle: #dde2e2;
+  --hcsc-color-border-strong: #003333;
+  --hcsc-color-border-focus: #007cbf;
+
+  --hcsc-color-action-primary-bg: #003333;
+  --hcsc-color-action-primary-text: #ffffff;
+  --hcsc-color-action-secondary-text: #003333;
+  --hcsc-color-action-secondary-border: #003333;
+  --hcsc-color-action-accent-text: #003333;
+
+  --hcsc-color-feedback-info-bg: #eff2f5;
+  --hcsc-color-feedback-info-accent: #007cbf;
+  --hcsc-color-feedback-warning-bg: #fdebe3;
+  --hcsc-color-feedback-warning-accent: #f16022;
+  --hcsc-color-feedback-error-bg: #fbe9ea;
+  --hcsc-color-feedback-error-fg: #c9252d;
+  --hcsc-color-feedback-success-bg: #e4f3ec;
+  --hcsc-color-feedback-success-fg: #1e7b4f;
+
+  --hcsc-font-family-body: 'Open Sans Variable', 'Open Sans', system-ui, sans-serif;
+  --hcsc-font-family-display: 'Fraunces Variable', Fraunces, Georgia, serif;
+
+  --hcsc-type-body-size: 16px;
+  --hcsc-type-body-line-height: 24px;
+  --hcsc-type-body-lg-size: 20px;
+  --hcsc-type-body-lg-line-height: 30px;
+  --hcsc-type-body-sm-size: 14px;
+  --hcsc-type-body-sm-line-height: 21px;
+  --hcsc-type-h1-size: 64px;
+  --hcsc-type-h1-line-height: 64px;
+  --hcsc-type-h4-size: 30px;
+  --hcsc-type-h4-line-height: 36px;
+  --hcsc-type-nav-size: 16px;
+  --hcsc-type-nav-line-height: 24px;
+  --hcsc-type-button-size: 16px;
+  --hcsc-type-button-line-height: 20px;
+  --hcsc-letter-spacing-wide: 0.48px;
+
+  --hcsc-spacing-3xs: 2px;
+  --hcsc-spacing-2xs: 4px;
+  --hcsc-spacing-xs: 8px;
+  --hcsc-spacing-sm: 12px;
+  --hcsc-spacing-md: 16px;
+  --hcsc-spacing-lg: 24px;
+  --hcsc-spacing-2xl: 48px;
+  --hcsc-spacing-3xl: 64px;
+  --hcsc-spacing-4xl: 96px;
+  --hcsc-spacing-button-padding-x: 32px;
+  --hcsc-spacing-button-padding-y: 12px;
+
+  --hcsc-radius-sm: 4px;
+  --hcsc-radius-md: 8px;
+  --hcsc-radius-input: 8px;
+  --hcsc-radius-card: 20px;
+  --hcsc-radius-button: 100px;
+  --hcsc-radius-pill: 100px;
+  --hcsc-radius-full: 9999px;
+
+  --hcsc-border-width-hairline: 1px;
+  --hcsc-border-width-default: 2px;
+  --hcsc-border-width-thick: 4px;
+
+  --hcsc-size-control-md: 48px;
+  --hcsc-size-icon-md: 24px;
+  --hcsc-size-container-content: 1296px;
+  --hcsc-size-touch-target: 44px;
+
+  --page-gutter: 32px;
+  --header-main-height: 100px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --hcsc-type-h1-size: 40px;
+    --hcsc-type-h1-line-height: 48px;
+    --hcsc-type-h4-size: 24px;
+    --hcsc-type-h4-line-height: 30px;
+    --hcsc-type-body-lg-size: 18px;
+    --hcsc-type-body-lg-line-height: 27px;
+    --hcsc-spacing-4xl: 48px;
+    --page-gutter: 16px;
+    --header-main-height: 72px;
+  }
+}
